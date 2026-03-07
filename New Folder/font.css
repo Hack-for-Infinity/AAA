@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "OpenDyslexic-Regular";
+  src: url("/home/dell/Desktop/New Folder/__MACOSX/OpenDyslexic-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+	font-family 'OpenDyslexic-Regular.otf' , sans-serif ;
+	
+
+
+}
+
