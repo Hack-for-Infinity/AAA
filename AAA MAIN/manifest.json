@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "NeuroInclusive Reader",
+  "version": "1.0",
+  "description": "Bionic Reading, Focus Mode, Dyslexic Font, AI Summary for ADHD/Dyslexia",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "NeuroInclusive Tools"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [{
+    "resources": ["fonts/*.woff2"],
+    "matches": ["<all_urls>"]
+  }]
+}

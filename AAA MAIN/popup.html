@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 350px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    h3 {
+      margin-top: 0;
+      color: #333;
+    }
+    .section-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 15px 0 5px 0;
+      color: #555;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 3px;
+    }
+    button {
+      margin: 5px 0;
+      padding: 8px 12px;
+      width: 100%;
+      background: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #0052a3;
+    }
+    button.secondary {
+      background: #6c757d;
+    }
+    button.secondary:hover {
+      background: #5a6268;
+    }
+    select {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      background: white;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    #status {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #666;
+      font-weight: bold;
+    }
+    #result {
+      margin-top: 10px;
+      padding: 10px;
+      background: #f0f0f0;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1.5;
+      max-height: 200px;
+      overflow-y: auto;
+      display: none;
+    }
+    #result.show {
+      display: block;
+    }
+    .info {
+      font-size: 11px;
+      color: #999;
+      margin-top: 10px;
+      padding: 10px;
+      background: #f9f9f9;
+      border-radius: 4px;
+      border-left: 3px solid #0066cc;
+    }
+    .button-group {
+      display: flex;
+      gap: 5px;
+      margin: 5px 0;
+    }
+    .button-group button {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h3>NeuroInclusive Tools</h3>
+  
+  <div class="section-title">Reading Tools</div>
+  <button id="bionic">Bionic Reading</button>
+  <button id="focus">Focus Mode (Toggle)</button>
+  
+  <div class="section-title">Font Options</div>
+  <select id="fontFamily">
+    <option value="Arial">Arial (Default)</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Helvetica">Helvetica</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <option value="OpenDyslexic-Regular">OpenDyslexic</option>
+    <option value="Comic Sans MS">Comic Sans MS</option>
+  </select>
+  <div class="button-group">
+    <button id="applyFont" class="secondary">Apply Font</button>
+    <button id="resetFont" class="secondary">Reset</button>
+  </div>
+  
+  <div class="section-title">AI Summary</div>
+  <button id="summarize">Generate Summary</button>
+  
+  <label>OpenAI API Key:</label>
+  <input id="api-key" type="password" placeholder="sk-...">
+  <button id="save-key">Save Key</button>
+  
+  <div id="status"></div>
+  <div id="result"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
