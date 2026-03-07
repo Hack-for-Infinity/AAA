@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Font Changer",
+  "version": "1.0",
+  "description": "Change the font of any website.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["font/OpenDyslexic-Regular.woff2"],
+      "matches": ["<all_urls>"] 
+    }
+  ]
+}
